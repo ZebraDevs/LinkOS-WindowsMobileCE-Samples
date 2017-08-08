@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC3E7882-CB44-485A-89F9-E353935E73E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VbDevDemos.ZebraDeveloperDemos.DeveloperDemoForm</StartupObject>
+    <RootNamespace>VbDevDemos</RootNamespace>
+    <AssemblyName>ZSDK_Demos_VB</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <MyType>WindowsForms</MyType>
+    <DeployDirSuffix>VbDevDemos</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>ZSDK_Demos_VB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>ZSDK_Demos_VB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="InTheHand.Net.Personal, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+<SpecificVersion>False</SpecificVersion>
+<HintPath>..\..\..\..\third_party\InTheHand.Net.Personal.dll</HintPath>
+</Reference>
+    <Reference Include="ZebraBluetoothAdapter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ZSDK_API, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+<Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Compile Include="ConnectivityDemoForm.Designer.vb">
+      <DependentUpon>ConnectivityDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectivityDemoForm.vb">
+    </Compile>
+    <Compile Include="DiscoveryDemoForm.Designer.vb">
+      <DependentUpon>DiscoveryDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DiscoveryDemoForm.vb">
+    </Compile>
+    <Compile Include="ImagePrintDemoForm.Designer.vb">
+      <DependentUpon>ImagePrintDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePrintDemoForm.vb">
+    </Compile>
+    <Compile Include="ListFormatsDemoForm.Designer.vb">
+      <DependentUpon>ListFormatsDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListFormatsDemoForm.vb">
+    </Compile>
+    <Compile Include="SendFileDemoForm.Designer.vb">
+      <DependentUpon>SendFileDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SendFileDemoForm.vb">
+    </Compile>
+    <Compile Include="StoredFormatDemoForm.Designer.vb">
+      <DependentUpon>StoredFormatDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StoredFormatDemoForm.vb">
+    </Compile>
+    <Compile Include="ZebraForm.vb">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionPanel.Designer.vb">
+      <DependentUpon>ConnectionPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionPanel.vb">
+    </Compile>
+    <Compile Include="DeveloperDemoForm.Designer.vb">
+      <DependentUpon>DeveloperDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperDemoForm.vb">
+    </Compile>
+    <Compile Include="MagCardDemoForm.Designer.vb">
+      <DependentUpon>MagCardDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MagCardDemoForm.vb">
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterStatusDemoForm.Designer.vb">
+      <DependentUpon>PrinterStatusDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterStatusDemoForm.vb">
+    </Compile>
+    <Compile Include="SignatureCaptureDemoForm.Designer.vb">
+      <DependentUpon>SignatureCaptureDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureCaptureDemoForm.vb">
+    </Compile>
+    <Compile Include="SmartCardDemoForm.Designer.vb">
+      <DependentUpon>SmartCardDemoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SmartCardDemoForm.vb">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZebraBluetoothAdapter.dll" />
+<Content Include="ZSDK_API.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

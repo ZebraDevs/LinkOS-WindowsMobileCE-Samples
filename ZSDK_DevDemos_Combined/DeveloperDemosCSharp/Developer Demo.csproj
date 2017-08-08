@@ -1,0 +1,229 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{088981F3-FC1D-4A03-8B87-AD575F375C01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZSDK_Demos</RootNamespace>
+    <AssemblyName>ZSDK_Demos_CSharp</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>CSharpDevDemos</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="mscorlib" />
+    <Reference Include="InTheHand.Net.Personal, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+<SpecificVersion>False</SpecificVersion>
+<HintPath>..\..\..\..\third_party\InTheHand.Net.Personal.dll</HintPath>
+</Reference>
+    <Reference Include="ZebraBluetoothAdapter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ZSDK_API, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+<Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConnectionPanel.Designer.cs">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeveloperDemoForm.Designer.cs">
+      <DependentUpon>DeveloperDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectivityDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectivityDemoForm.Designer.cs">
+      <DependentUpon>ConnectivityDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterStatusDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterStatusDemoForm.Designer.cs">
+      <DependentUpon>PrinterStatusDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureCaptureDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignatureCaptureDemoForm.Designer.cs">
+      <DependentUpon>SignatureCaptureDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartCardDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartCardDemoForm.Designer.cs">
+      <DependentUpon>SmartCardDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscoveryDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscoveryDemoForm.Designer.cs">
+      <DependentUpon>DiscoveryDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePrintDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagePrintDemoForm.Designer.cs">
+      <DependentUpon>ImagePrintDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListFormatsDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListFormatsDemoForm.Designer.cs">
+      <DependentUpon>ListFormatsDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagCardDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagCardDemoForm.Designer.cs">
+      <DependentUpon>MagCardDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConnectionPanel.resx">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectivityDemoForm.resx">
+      <DependentUpon>ConnectivityDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeveloperDemoForm.resx">
+      <DependentUpon>DeveloperDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterStatusDemoForm.resx">
+      <DependentUpon>PrinterStatusDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignatureCaptureDemoForm.resx">
+      <DependentUpon>SignatureCaptureDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartCardDemoForm.resx">
+      <DependentUpon>SmartCardDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscoveryDemoForm.resx">
+      <DependentUpon>DiscoveryDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagePrintDemoForm.resx">
+      <DependentUpon>ImagePrintDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListFormatsDemoForm.resx">
+      <DependentUpon>ListFormatsDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagCardDemoForm.resx">
+      <DependentUpon>MagCardDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendFileDemoForm.resx">
+      <DependentUpon>SendFileDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoredFormatDemoForm.resx">
+      <DependentUpon>StoredFormatDemoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SendFileDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendFileDemoForm.Designer.cs">
+      <DependentUpon>SendFileDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredFormatDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoredFormatDemoForm.Designer.cs">
+      <DependentUpon>StoredFormatDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZebraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZebraBluetoothAdapter.dll" />
+<Content Include="ZSDK_API.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
