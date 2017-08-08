@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BluetoothDiscoveryDemo_VBNET", "BluetoothDiscoveryDemo_VB\BluetoothDiscoveryDemo_VBNET.vbproj", "{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE1ED21-9916-4A90-A2F8-0E1E57BA8959}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
