@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/demo.css">
+        <META HTTP-Equiv="bottomcommandarea" content="show">
+        <title>Simple Print Demo</title>
+    </head>
+    <body>
+        Home :: 
+        <a href="./Discover.html">Next up...Printer Discovery!</a> ::
+        <a href="./Connect.html">Connect</a> ::
+        <a href="./GetStatus.html">Check Status</a> ::
+        <a href="./Final_demo.html">Print</a>
+        <div class="header center" align="center">
+            <h2 class="center">Simple Print Demo</h2>
+            <h3 class="center">Create simple Inventory Label</h3>
+        </div>
+        <table class="center">
+            <tr><td class="label">Item Name: </td><td><input type="text" id="name_txb"></td></tr>
+            <tr><td class="label">Item Number: </td><td><input type="text" id="num_txb"></td></tr>
+            <tr><td><button class="btn" onclick="z_print(); return false;">Print</button></td><td></td></tr>
+        </table>
+        <p id="connect_info"></p>
+    </body>
+    <script>
+    
+function z_print()
+{
+    var name_txb = document.getElementById("name_txb");
+    var num_txb = document.getElementById("num_txb");
+    var connect_stat = document.getElementById("connect_info");
+    
+    connect_stat.innerHTML = "Creating print job";
+    var name = name_txb.value;
+    var number = num_txb.value;
+    var print_script = "^XA^XFE:TEST1.ZPL^FS^FN1^FD" + name + "^FS^FN2^FD" + number + "^FS^XZ";
+    
+    connect_stat.innerHTML += "<br>Unable to print";
+    alert("Hey, I don't know how to print! label: \r\n" + print_script);
+}
+    
+    </script>
+</html>

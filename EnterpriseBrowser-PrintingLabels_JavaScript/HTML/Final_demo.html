@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <script type="text/javascript" charset="utf-8" src="./EnterpriseBrowser/ebapi-modules.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./EnterpriseBrowser/eb.printer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./EnterpriseBrowser/eb.printerzebra.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./EnterpriseBrowser/eb.file.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./EnterpriseBrowser/eb.application.js"></script>         
+        <link rel="stylesheet" type="text/css" href="./css/demo.css">
+        <META HTTP-Equiv="bottomcommandarea" content="show">
+        <title>Simple Print Demo</title>
+    </head>
+    <body onload="page_loaded();">
+        <a href="./index.html">Home</a> :: 
+        <a href="./Discover.html">Discovery</a> ::
+        <a href="./Connect.html">Connect</a> ::
+        <a href="./GetStatus.html">Check Status</a> ::
+        Print 
+        <div class="header center" align="center">
+            <h2 class="center">Simple Print Demo</h2>
+            <h3 class="center">Create simple Inventory Label</h3>
+        </div>
+        <table class="center">
+            <tr><td class="label">Item Name: </td><td><input type="text" id="name_txb"></td></tr>
+            <tr><td class="label">Item Number: </td><td><input type="text" id="num_txb"></td></tr>
+            <tr><td><button class="btn" onclick="z_print(); return false;" id="print_btn">Print</button></td><td></td></tr>
+        </table>
+        <div id="discovery_frm" style="display:none; width:400px;">
+            <hr>
+            <form class="center">
+                <select name="search_type" id="search_type">
+                  <option selected value="MAC">Bluetooth MAC:</option>
+                  <option value="IP">IP Address:</option>
+                </select>
+                <input type="text" id="address_txb">
+                <input type="submit" class='btn' value="Search" onclick="_discover(); return false;" id="search_btn">
+            </form>
+        </div>
+        <div id="output" style="width:400px;">
+          <p id="connect_info"></p>
+        </div>
+    </body>
+    <script type="text/javascript" charset="utf-8" src="./js/print_helper_final.js"></script>
+    <script>
+
+function z_print()
+{
+    var name_txb = document.getElementById("name_txb");
+    var num_txb = document.getElementById("num_txb");
+    var connect_stat = document.getElementById("connect_info");
+    document.getElementById("print_btn").disabled = true;
+    
+    connect_stat.innerHTML  += "<br><br>Creating print job";
+    var name = name_txb.value;
+    var number = num_txb.value;
+    create_print_job(name, number);
+    
+    connect_stat.innerHTML += "<br>Finding a printer";
+    discover();
+    // this picks up in a callback to the connect() function
+}
+
+function discover()
+{
+    // a printer has already been found
+    if ((myPrinterID) && (myPrinterID.length > 5))
+    {   
+        document.getElementById("connect_info").innerHTML += "<br>Printer Already Found: " + myPrinterID;
+        connect(); 
+        return;
+    }
+    
+    // we need to get a little more input from the user
+    document.getElementById("search_btn").disabled = false;
+    printerList.length = 0;
+    document.getElementById("discovery_frm").style.display="block";
+    document.getElementById("connect_info").innerHTML += "<br>Please input a printer address and select Search";
+}
+function _discover()
+{
+    document.getElementById("connect_info").innerHTML += "<br>Searching...";
+    var search_btn = document.getElementById("search_btn");
+    var search_type = document.getElementById("search_type").value;
+    var address = document.getElementById("address_txb").value;
+    
+    if (address.length < 8)
+        error("must enter an address");
+    else
+    {
+        search_btn.disabled = true;
+        start_discovery(search_type, address);
+    }
+}
+function printer_selected(id)
+{
+    document.getElementById("discovery_frm").style.display="none";
+    document.getElementById("connect_info").innerHTML += "<br>Paired with printer " + id;
+}
+function print_job_sent()
+{
+    document.getElementById("connect_info").innerHTML += "<br>Print job sent to printer.";
+    document.getElementById("print_btn").disabled = false;
+}
+function error(msg)
+{
+    document.getElementById("connect_info").innerHTML += "<br>" + msg;
+    alert(msg);
+    document.getElementById("print_btn").disabled = false;
+    document.getElementById("discovery_frm").style.display="none";
+    disconnect();
+}
+function page_loaded()
+{
+    //document.getElementById("print_btn").disabled = false;
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var ow = window.outerWidth;
+    alert("Width inner: " + w + ", outer: " + ow);
+    document.getElementById("output").style.width = (w - 20);
+    document.getElementById("discovery_frm").style.width = (w - 20);
+}
+window.addEventListener('resize', function(){page_loaded();}, true);
+
+window.onunload = function(){
+      disconnect();
+  }
+    
+    </script>
+</html>
