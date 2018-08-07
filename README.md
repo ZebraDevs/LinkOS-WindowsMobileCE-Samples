@@ -2,7 +2,43 @@
 
 ## Projects contained in this repository:
 
-[ZSDK_DevDemo]( https://github.com/Zebra/LinkOS-Webservices-Samples/tree/ZSDK_DevDemo)
+[BluetoothDiscoveryDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/BluetoothDiscoveryDemo_C%23)
+
+[BluetoothDiscoveryDemo_VB.NET]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/BluetoothDiscoveryDemo_VB.NET)
+
+[CameraPrintDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/CameraPrintDemo_C%23)
+
+[ConnectAndRetrieveFormats_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ConnectAndRetrieveFormats_C%23)
+
+[ConnectWithBluetooth_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ConnectWithBluetooth_C%23)
+
+[ConnectingOverBluetooth_C++](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ConnectingOverBluetooth_C++)
+
+[ConnectingOverIP_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ConnectingOverIP_C%23)
+
+[EnterpriseBrowser-PrintingLabels_JavaScript]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/EnterpriseBrowser-PrintingLabels_JavaScript)
+
+[ImageRotateDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ImageRotateDemo_C%23)
+
+[ListFormatDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ListFormatDemo_C%23)
+
+[MagneticCardReaderExample_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/MagneticCardReaderExample_C%23)
+
+[PreviousConnectionDemo_VB.NET]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/PreviousConnectionDemo_VB.NET)
+
+[PrinterDefaultDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/PrinterDefaultDemo)
+
+[ScanPairDemo_VB.NET]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ScanPairDemo_VB.NET)
+
+[ScreenCapture_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ScreenCapture_C%23)
+
+[TCPDiscoveryDemo_C#](https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/TCPDiscoveryDemo_C%23)
+
+[TCPDiscoveryDemo_VB.NET]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/TCPDiscoveryDemo_VB.NET)
+
+[USBBidirectionalDemo_C#rrr]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/USBBidirectionalDemo_C%23)
+
+[ZSDK_DevDemos_Combined]( https://github.com/Zebra/LinkOS-WindowsMobileCE-Samples/tree/ZSDK_DevDemos_Combined)
 
 
 # Notes
